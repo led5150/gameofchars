@@ -1,16 +1,16 @@
 # gameofchars
 
-**Welcome to the Game of Chars!**
+#**Welcome to the Game of Chars!**
 
 ***********
 This program simulates a Universe in which the primary Organisms are 2D arrays of alphanumeric ASCII characters. Organisms are born, live, eat,
 grow, mutate, replicate, fight, make babies, decay slowly, and eventually die like the rest of us!  Watch in wonderment as the miracle of life unfolds
 before your very eyes.  Witness the spontaneous creation of creatures as quantum fluctuations occur.  Why, even marvel at the movement of these plucky
 little Organisms as they move about from the right side of the screen, over to the left, from top to bottom, bottom to top and everywhere in between!  
-It's as if their entire world is a sphere, flattened out into a (default or user defined) rectangular space.  
-Or any space of your choosing (as long as it is > 0 x 0)!  Can't wait to get started?  Read on!
+It's as if their entire world is a sphere, flattened out into a (default or user defined) rectangular space. Or any space of your choosing 
+(as long as it is > 0 x 0)!  Can't wait to get started?  Read on!
 
-## To get started: 
+# To get started: 
 
 The compiled binary is included, so you may simply use that if you don't want to make any changes to the source code. It should work well in most
 Linux/Unix environments.
@@ -59,12 +59,16 @@ A new Organism is defined in this file, and must be preceded by ##NEWLIFE for it
 except ##NEWLIFE will be ignored.  You also must fill out values for each of the variables listed in the header after ##GUIDE.  But once you have
 done that, you can watch as your new, lovely little Organism will pop into exsistence as soon as you launch the gameofchars!
 
-## Variables you can (and should) mess with!
+Name is a string.  life, food, xpos, ypos and mutation must all be integers.  death, vspeed and hspeed must be doulbes, and char must be, well, a char.
+
+NOTE: I start you off with Maude, represented by the character '%'.  Get it?  Soooo clever I know!
+
+# Variables you can (and should) mess with!
 
 There are a few variables, all of which are of "static const" at the top of each .cpp file.  We shall list a few of the more fun ones here, but
 feel free to explore and see what each of them does!  It can get pretty wild out there for an Organism if you do.
 
-### universe.cpp
+# universe.cpp
     static const int DIV           = 10;
     static const int TIME          = 1000000 / DIV;
 These two guys control the speed at which the screen refreshes, thus, the "frames per second" of the game.  Higher values for DIV result in
@@ -87,3 +91,18 @@ You probably got it from ^^^ but this controls how many cycles before ABUNDANCE 
     static const double ENERGY     = 2;
 Finally, this is the number of "life" points each food gives an Organism if it happens to eat.
 
+# gameofchars.cpp
+        static const int DEFAULT_HEIGHT = 25;
+        static const int DEFAULT_WIDTH  = 80;
+You may change these variables to control the default width and height of the Universe.  
+
+# Organism.cpp
+        static const int DIST = 50;
+Distance a food has to be for an organism *not* to move towards it. Organisms will try to move towards the closest food particle to it, so long as it is
+< DIST cells away.  This makes for some interesting battles over resources between our little friends...
+
+# Final Notes:
+
+I hope you enjoy playing with this as much as I did building and tuning it! Now go out, and create, live, laugh and destroy!
+
+- Matt
