@@ -21,7 +21,7 @@ simply type:
 
     make
 
-The only rule in the Makefile will compile an executable called "gameofchars"
+The only rule in the Makefile will compile an executable called "gameofchars".
 
 Here is the requisite usage dialog:
 
