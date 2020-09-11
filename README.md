@@ -17,6 +17,12 @@ Linux/Unix environments.
 
 Or you can use the provided Makefile to re-compile the code after making any modifications.
 
+simply type:
+
+    make
+
+The only rule in the Makefile will compile an executable called "gameofchars"
+
 Here is the requisite usage dialog:
 
     Usage: ./gameofchars [HEIGHT] [WIDTH] [filename]
