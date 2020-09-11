@@ -101,7 +101,7 @@ void Universe::arrow_of_time()
 void Universe::print_messages()
 {
     cout << "Time Passed: " << num_generations << endl;
-    cout << "Organisms that have passed: " << num_dead << endl;
+    cout << "Number of dead: " << num_dead << endl;
     if (print_message and print_me > 0) {
         for (size_t i = 0; i < messages.size(); i++) {
             cout << messages[i] << endl;

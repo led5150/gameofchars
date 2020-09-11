@@ -18,7 +18,7 @@ void run_universe(int argc, char *argv[]);
 bool input_is_ok(int argc, char *argv[]);
 void usage_message(string error);
 
-static const int DEFAULT_HEIGHT = 20;
+static const int DEFAULT_HEIGHT = 25;
 static const int DEFAULT_WIDTH  = 80;
 
 int main(int argc, char *argv[])

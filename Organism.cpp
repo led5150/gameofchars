@@ -18,7 +18,8 @@
 
 using namespace std;
 
-static const int DIST = 50;
+static const int DIST = 50; // distance a food has to be for an organism
+                            // to not move towards it.
 
 // Default Constructor
 Organism::Organism()
