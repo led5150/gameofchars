@@ -25,17 +25,20 @@ Here is the requisite usage dialog:
 
 As you may have noticed, there are a few usage cases.  Lets see some examples, shall we?
 
+
 To simply run with default settings, 
 
     ./gameofchars
     
 This runs with a pre-defined HEIGHT and WIDTH for the universe. You can change these variables in the gameofchars.cpp file.
 
+
 To run with your own settings for HEIGHT and WIDTH, simply pass them in like so:
     
     ./gameofchars 30 90
     
 As a general rule of thumb, you'll want the WIDTH variable to be ~3x the HEIGHT.  Things just look nicer that way!
+
 
 You can also specify your own filename by:
 
@@ -74,19 +77,24 @@ feel free to explore and see what each of them does!  It can get pretty wild out
 These two guys control the speed at which the screen refreshes, thus, the "frames per second" of the game.  Higher values for DIV result in
 faster simulation. Change this by a factor of 10 or 100 and watch those puppies fly!
 
+
     static const int QUANT_FLUX    = 75;
 Controls after how many cycles, or frames that a quantum_fluctuation will occur.  Quantum fluctuations cause a random Organism to spontaneously 
 pop into exsistence!
+
 
     static const int MUTRATE       = 250;
 Controls how many cycles, or frames, until the next mutation. Mutations have various effects on existing Organisms, such as changing the rate at 
 which they die, move and maybe even spontaneously grow or lose a body part!  Yikes!
 
+
     static const int ABUNDANCE     = 1;
 Controls the number of "food" particles that get placed into the universe for every PROLIFERATION number of cycles.
 
+
     static const int PROLIFERATION = 1;
 You probably got it from ^^^ but this controls how many cycles before ABUNDANCE number of food(s) get dropped.
+
 
     static const double ENERGY     = 2;
 Finally, this is the number of "life" points each food gives an Organism if it happens to eat.
@@ -96,10 +104,12 @@ Finally, this is the number of "life" points each food gives an Organism if it h
         static const int DEFAULT_WIDTH  = 80;
 You may change these variables to control the default width and height of the Universe.  
 
+
 ### Organism.cpp
         static const int DIST = 50;
 Distance a food has to be for an organism *not* to move towards it. Organisms will try to move towards the closest food particle to it, so long as it is
 < DIST cells away.  This makes for some interesting battles over resources between our little friends...
+
 
 ## Final Notes:
 
